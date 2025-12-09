@@ -111,15 +111,19 @@ jupyter notebook inventory_analysis.ipynb
 
 ---
 
-## 📈 Results
+📈 Key Results (from synthetic data)
 
-The system analyzes 50 products across 4 warehouses and:
-- Identifies overstock worth £XXk
-- Recommends XX optimal transfers
-- Prevents stockouts at customer-facing warehouse
-- Eliminates 130-260 hours/year of manual work
+50 products analyzed
 
-*(Numbers based on synthetic demo data)*
+Overstock value: ~£145k
+
+Transfers recommended: 90+
+
+Warehouse with highest overstock: DC_INTERNAL
+
+Stockouts prevented at DC_MAIN: Yes — 100%
+
+(Values based on generated mock data)
 
 ---
 
