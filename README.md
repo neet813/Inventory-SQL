@@ -2,9 +2,15 @@
 
 > **V1: Analysis & Insights** | A data-driven approach to warehouse inventory management
 
+
+**SAMPLE DATA
 <img width="808" height="209" alt="image" src="https://github.com/user-attachments/assets/e89fa86a-17b5-4872-8287-3a707d0c52d8" />
 
+
+**TRANSFER RECOMMENDATIONS : (MAIN WAREHOUSE : DC_MAIN , TRANSFER FROM 3 WAREHOUSE , [DC_INTERNAL ,SUPPLIER_A,SUPPLIER_B ])
 <img width="678" height="385" alt="image" src="https://github.com/user-attachments/assets/ce670887-b8d8-44ff-a3a7-478214aae672" />
+
+**
 <img width="674" height="369" alt="image" src="https://github.com/user-attachments/assets/75615b09-888a-4e6a-bdf9-de4bea78062f" />
 
 <img width="1005" height="588" alt="image" src="https://github.com/user-attachments/assets/461cf6e8-3d83-4ad1-8bc0-409ca193211b" />
