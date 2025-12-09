@@ -102,12 +102,6 @@ inventory-optimization-v1/
 
 ---
 
-## 🔧 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR-USERNAME/inventory-optimization-v1.git
-
 # Install dependencies
 pip install -r requirements.txt
 
@@ -180,8 +174,8 @@ MIT License - See LICENSE file
 
 **NAVNEET KAUR**  
 📧 Email: neetkr.2525@example.com  
-💼 LinkedIn: linkedin.com/in/yourprofile  
-🐙 GitHub: github.com/yourusername
+💼 LinkedIn: https://www.linkedin.com/in/navneet-kaur-analyst/
+🐙 GitHub: https://github.com/neet813
 
 ---
 
