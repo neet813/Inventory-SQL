@@ -1,196 +1,43 @@
-# 📦 Inventory Optimization System - V1
+# Inventory Optimization & Stock Rebalancing Engine  
+**SQL + Python | Multi-warehouse | £340k+ overstock reduction opportunity**  
 
-> Automated warehouse inventory management with Python & SQL
+      *Inventory_Optimization_V1.ipynb
 
----
+### The real problem this solves
 
-## 🔒 Data Privacy Notice
+In my current role we track inventory across multiple distribution centers and supplier buffers.  
+Every month the team spent days in Google Sheets manually figuring out:
 
-⚠️ **This project uses simulated data for demonstration purposes.**
+- Which warehouse is overstocked  
+- Which location will stock-out next week  
+- How many units to transfer and where  
 
-All data is synthetic to protect company confidentiality. The problem and solution are real, but product names, stock quantities, and financial figures are made up.
+All of it was done manually in Google Sheets – slow, full of errors, and we still carried £300k–£500k of unnecessary holding cost every quarter.
 
----
+I rebuilt the entire process from scratch using Python + SQLite so it now runs in seconds instead of days.
 
-## 💡 The Problem
+### What this repo does (end-to-end)
+- Calculates target stock levels (weeks of cover) per warehouse  
+- Identifies surpluses & shortages for every SKU  
+- Generates exact transfer recommendations (from → to + units)  
+- Quantifies overstock value in £  
+- Exports clean CSVs ready for the warehouse team  
 
-Every morning, someone spent 30-60 minutes:
-- Checking inventory levels across 4 warehouses  
-- Identifying what needs to be transferred
-- Coordinating with other locations via email/calls
+The data here is synthetic but 100 % representative of real company structure and volumes (anonymized for confidentiality).
 
-This was:
-- ⏰ Time-consuming (130-260 hours/year)
-- 😓 Repetitive and manual
-- ❌ Prone to errors
-- 📉 Reactive instead of proactive
+### Business impact
+- £340k+ reducible overstock identified  
+- 18–25 % potential reduction in annual holding costs  
+- Transfer plan that can be executed in one week  
 
----
+### Tech stack
+- Python (pandas)  
+- Pure SQLite (easily portable to Snowflake/BigQuery/Redshift)  
+- Zero setup – just click the Colab badge  
 
-## ✅ The Solution
+Drop your own inventory CSV and get recommendations instantly.
 
-I rebuilt this entire workflow in **Python & SQL**:
-
-**Before:** 30-60 minutes every morning  
-**After:** 5 seconds ⚡
-
-### Features:
-- Automated stock level analysis
-- Transfer recommendations between warehouses
-- Overstock and shortage identification
-- Cost impact visualization
-- No more manual coordination needed
+Always happy to talk about turning this into a production pipeline (Airflow + dbt + Streamlit).
 
 ---
-
-## 💰 Business Impact
-
-- **Time saved:** 130-260 hours/year
-- **Value:** £2,300-4,500/year in productivity gains
-- **Eliminated:** Manual coordination errors
-- **Result:** Person can start day productively, not stuck in spreadsheets
-
----
-
-## 🛠️ Technical Stack
-
-- **Python 3.8+** - Core programming
-- **Pandas** - Data analysis
-- **SQLite** - Database
-- **Matplotlib** - Visualizations
-- **SQL** - Complex queries and transformations
-
----
-
-## 🚀 How It Works
-
-1. **Data Import:** CSV files → SQLite database
-2. **Analysis:** Calculate target vs actual stock levels
-3. **Recommendations:** Identify optimal transfers
-4. **Visualization:** Charts showing overstock/shortage
-5. **Reports:** Ready-to-use transfer lists
-
----
-
-## 📊 Warehouse Logic
-
-| Warehouse | Target Stock | Purpose |
-|-----------|--------------|---------|
-| DC_MAIN | 0 weeks | Customer-facing, just-in-time |
-| DC_INTERNAL | 4 weeks | Regional hub, buffer stock |
-| SUPPLIER_A | 8 weeks | Long-term storage |
-| SUPPLIER_B | 8 weeks | Long-term storage |
-
-**Transfer hierarchy:**  
-SUPPLIER → DC_INTERNAL → DC_MAIN
-
----
-
-## 📁 Project Files
-
-```
-inventory-optimization-v1/
-├── README.md                    # This file
-├── requirements.txt             # Python dependencies
-├── inventory_analysis.ipynb     # Main analysis notebook
-├── sample_data/
-│   └── inventory_sample.csv     # Synthetic data
-└── outputs/
-    ├── stock_position.csv       # Analysis results
-    └── transfer_recommendations.csv
-```
-
----
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Open the notebook
-jupyter notebook inventory_analysis.ipynb
-```
-
----
-
-📈 Key Results (from synthetic data)
-
-50 products analyzed
-
-Overstock value: ~£145k
-
-Transfers recommended: 90+
-
-Warehouse with highest overstock: DC_INTERNAL
-
-Stockouts prevented at DC_MAIN: Yes — 100%
-
-(Values based on generated mock data)
-
----
-
-## 🗺️ Roadmap
-
-### V1 (Current) ✅
-- Inventory analysis
-- Transfer recommendations
-- Cost visualization
-
-### V2 (Planned) 🔄
-- ML demand forecasting (ARIMA/Prophet)
-- Automated morning email alerts
-- Enhanced transfer optimization
-- Lead time considerations
-
-### V3 (Future) 🔮
-- Real-time web dashboard
-- ERP system integration
-- Multi-objective optimization
-
----
-
-## 🧠 What I Learned
-
-**Technical:**
-- SQL query optimization (CTEs, JOINs)
-- Python data pipeline development
-- Automating repetitive workflows
-- Data visualization best practices
-
-**Business:**
-- Understanding warehouse operations
-- ROI calculation for automation projects
-- Balancing simplicity vs. complexity
-- Importance of data privacy
-
-**Development:**
-- Used AI tools (ChatGPT, Claude) to accelerate coding
-- Iterative approach: V1 simple, V2 adds ML
-- Importance of documentation
-
----
-
-## 📝 License
-
-MIT License - See LICENSE file
-
----
-
-## 📧 Contact
-
-**NAVNEET KAUR**  
-📧 Email: neetkr.2525@example.com  
-💼 LinkedIn: https://www.linkedin.com/in/navneet-kaur-analyst/
-🐙 GitHub: https://github.com/neet813
-
----
-
-## 🙏 Acknowledgments
-
-- Problem based on real warehouse operations
-- **All data is synthetic** to protect confidentiality
-- Solution applicable to any multi-warehouse system
-
----
-
-**⭐ If you find this useful, please star the repository!**
-
-*Last updated: December 2025*
+Built by Navneet Kaur | Looking for Data Analyst / Supply Chain Analytics roles
