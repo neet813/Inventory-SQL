@@ -1,20 +1,19 @@
 # Inventory Optimization & Stock Rebalancing Engine  
-**SQL + Python | Multi-warehouse | £340k+ overstock reduction opportunity**  
+**SQL + Python | Multi-warehouse | £340k+ overstock reduction opportunity**
 
-      *Inventory_Optimization_V1.ipynb
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neet813/Inventory-SQL/blob/main/Inventory_Optimization_V1.ipynb)
 
 ### The real problem this solves
-
 In my current role we track inventory across multiple distribution centers and supplier buffers.  
 Every month the team spent days in Google Sheets manually figuring out:
+- Which warehouse was overstocked
+- Which location would stock-out next week
+- How many units to transfer and where
 
-- Which warehouse is overstocked  
-- Which location will stock-out next week  
-- How many units to transfer and where  
+It was slow, full of errors, and we still carried £300k–£500k of unnecessary holding cost every quarter.
 
-All of it was done manually in Google Sheets – slow, full of errors, and we still carried £300k–£500k of unnecessary holding cost every quarter.
-
-I rebuilt the entire process from scratch using Python + SQLite so it now runs in seconds instead of days.
+I rebuilt the entire process from scratch using Python + SQLite.  
+What used to take days now runs in **under 3 seconds**.
 
 ### What this repo does (end-to-end)
 - Calculates target stock levels (weeks of cover) per warehouse  
@@ -23,21 +22,21 @@ I rebuilt the entire process from scratch using Python + SQLite so it now runs i
 - Quantifies overstock value in £  
 - Exports clean CSVs ready for the warehouse team  
 
-The data here is synthetic but 100 % representative of real company structure and volumes (anonymized for confidentiality).
+Data is synthetic but 100 % representative of real company volumes and structure (anonymized for confidentiality).
 
 ### Business impact
 - £340k+ reducible overstock identified  
 - 18–25 % potential reduction in annual holding costs  
-- Transfer plan that can be executed in one week  
+- Transfer plan executable in one week  
 
 ### Tech stack
-- Python (pandas)  
+- Python (pandas, numpy)  
 - Pure SQLite (easily portable to Snowflake/BigQuery/Redshift)  
-- Zero setup – just click the Colab badge  
+- Zero setup – runs instantly in Colab  
 
-Drop your own inventory CSV and get recommendations instantly.
+Drop your own inventory CSV and get recommendations immediately.
 
-Always happy to talk about turning this into a production pipeline (Airflow + dbt + Streamlit).
+Always happy to discuss productionizing this (Airflow + dbt + Streamlit dashboard).
 
----
-Built by Navneet Kaur | Looking for Data Analyst / Supply Chain Analytics roles
+—
+Built by Navneet Kaur | Actively looking for Data Analyst & Supply Chain Analytics roles
