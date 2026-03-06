@@ -29,8 +29,13 @@ Data is synthetic but 100 % representative of real company volumes and structure
 - 18–25 % potential reduction in annual holding costs  
 - Transfer plan executable in one week  
 
+Top Overstocked SKUs
+
 ![Inventory-SQL
 ](Overstock-table.png)
+
+Overstock Value by Warehouse
+
 ![Inventory-SQL
 ](Overstock-per-Warehouse_Visualisation.png)
 
