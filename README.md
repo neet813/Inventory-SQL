@@ -29,6 +29,12 @@ Data is synthetic but 100 % representative of real company volumes and structure
 - 18–25 % potential reduction in annual holding costs  
 - Transfer plan executable in one week  
 
+![Inventory-SQL
+](Overstock-table.png)
+![Inventory-SQL
+](Overstock-per-Warehouse_Visualisation.png)
+
+
 ### Tech stack
 - Python (pandas, numpy)  
 - Pure SQLite (easily portable to Snowflake/BigQuery/Redshift)  
