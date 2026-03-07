@@ -4,7 +4,7 @@
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neet813/Inventory-SQL/blob/main/Inventory_Optimization_V1.ipynb)
 
 ### The real problem this solves
-In my current role we track inventory across multiple distribution centers and supplier buffers.  
+Inspired by inefficiencies I observed in warehouse operations — built on synthetic but representative data, anonymized for confidentiality.  
 Every month the team spent days in Google Sheets manually figuring out:
 - Which warehouse was overstocked
 - Which location would stock-out next week
