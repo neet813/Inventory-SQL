@@ -39,15 +39,22 @@ Overstock Value by Warehouse
 ![Inventory-SQL
 ](Overstock-per-Warehouse_Visualisation.png)
 
+### 🧠 The Logic Behind the Engine (Developer’s Notes)
 
-### Tech stack
-- Python (pandas, numpy)  
-- Pure SQLite (easily portable to Snowflake/BigQuery/Redshift)  
-- Zero setup – runs instantly in Colab  
+I built this tool to move from **Reactive** to **Strategic** inventory management. Here is why I made certain technical decisions:
 
-Drop your own inventory CSV and get recommendations immediately.
+* **Why "Weeks of Cover" (WoC)?**: I chose WoC over "Static Min/Max levels" because it is dynamic. If a product's sales double, the target stock automatically scales. This prevents stockouts during seasonal peaks.
+* **Calculating the £340k Opportunity**: This isn't a guess. I calculated this using: `(Current Stock - Target Stock) * Unit Cost`. It represents "Trapped Capital" that could be used for other business investments.
+* **SQL Portability**: I used **SQLite** so the project runs instantly in Colab, but the queries use **ANSI-SQL** (CTEs and Window Functions). This means the logic is ready to be copied into enterprise tools like **Snowflake, BigQuery, or Redshift**.
+* **Synthetic but Scalable**: While the data is synthetic to protect confidentiality, the schema (Warehouse ID, SKU, Lead Time) is modeled exactly after real-world ERP exports.
 
-Always happy to discuss productionizing this (Airflow + dbt + Streamlit dashboard).
+### 🛠️ Tech Stack & Skills
+* **SQL:** Advanced CTEs, Window Functions (`SUM OVER`), and Conditional Aggregation.
+* **Python:** Pandas for data cleaning and Matplotlib/Seaborn for the "Overstock vs. Warehouse" visualizations.
+* **Deployment:** Google Colab for an interactive, "Zero-Setup" user experience.
+
+---
+**Building a bridge between raw warehouse data and CFO-level financial insights.**
 
 —
 Built by Navneet Kaur | Actively looking for Data Analyst & Supply Chain Analytics roles
